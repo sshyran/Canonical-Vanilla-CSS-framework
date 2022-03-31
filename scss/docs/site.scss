@@ -21,7 +21,9 @@ $color-suru-slant-left-fallback: $color-suru-slant-left;
 @import '@canonical/cookie-policy/build/css/cookie-policy';
 
 .p-button.is-aqua,
-.p-button--positive.is-aqua {
+.p-button--positive.is-aqua,
+.cookie-policy .p-button,
+.cookie-policy .p-button--positive {
   background-color: #cacaca;
   border: 0;
   border-radius: 9999px;
@@ -64,6 +66,7 @@ $color-suru-slant-left-fallback: $color-suru-slant-left;
   }
 }
 
+.cookie-policy .p-button--positive,
 .p-button--positive.is-aqua {
   background-color: #5aa0f1;
 
@@ -96,10 +99,19 @@ $color-suru-slant-left-fallback: $color-suru-slant-left;
   }
 }
 
+.cookie-policy .p-modal__dialog,
 .p-card.is-aqua {
-  background: $color-mid-light;
+  background: $color-light;
   border-radius: 0.5rem 0.5rem 0 0;
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 60%), 0 22px 70px 4px rgb(0 0 0 / 56%), 0 0 0 1px rgb(0 0 0 / 30%);
+}
+
+.cookie-policy .p-modal__header {
+  background: $color-light;
+}
+
+.cookie-policy {
+  @include vf-p-switch;
 }
 
 .p-strip--light {
